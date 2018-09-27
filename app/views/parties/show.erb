@@ -1,0 +1,5 @@
+<h1>PARTY SHOW PAGE</h1>
+<p>Host: <%= @party.host %></p>
+<p>Clown: <%= link_to @party.clown.name, @party.clown %></p>
+
+<%= link_to "home", parties_path %> | <%= link_to "edit", edit_party_path %> | <%= link_to "delete", party_path, method: :delete %>

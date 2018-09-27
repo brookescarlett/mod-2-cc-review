@@ -1,0 +1,6 @@
+<h1>CLOWN SHOW PAGE</h1>
+<p>Name: <%= @clown.name %></p>
+<p>Weight: <%= @clown.weight %> lbs.</p>
+<p>Creepy: <%= @clown.creepy ? "this clown is creepy" : "happy non-creepy clown"%></p>
+
+<%= link_to "home", clowns_path %> | <%= link_to "edit", edit_clown_path %> | <%= link_to "delete", clown_path, method: :delete %> 

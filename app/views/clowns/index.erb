@@ -1,0 +1,5 @@
+<h1>Clown's Index Page</h1>
+
+<% @clowns.each do |clown| %>
+  <%= link_to clown.name, clown %> | <%= link_to "edit", edit_clown_path(clown) %> | <%= link_to "delete", clown_path(clown), method: :delete %> 
+<% end %>

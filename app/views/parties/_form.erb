@@ -1,0 +1,16 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <%= e %>
+  <% end %>
+<% end %>
+
+<%= form_for(@party) do |f| %>
+  <%= f.label :host %>
+  <%= f.text_field :host %>
+
+  <%= f.label :clown %>
+  <%= f.collection_select :clown_id, Clown.all, :id, :name %>
+
+  <%= f.submit %>
+
+<% end %>
